@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import {Meteor} from 'meteor/meteor';
 
 import './main.html';
 
@@ -18,5 +19,22 @@ Template.hello.events({
   'click button'(event, instance) {
     // increment the counter when button is clicked
     instance.counter.set(instance.counter.get() + 1);
-  },
+
+    /*Meteor.call("createDataSet","Aufa","test Ds","nothing", (err, res) => {
+      if (err) {
+        alert(err);
+      } else {
+        // success!
+      }
+    });
+*/
+    Meteor.call("newPost",(err, res) => {
+        if (err) {
+            alert(err);
+        } else {
+            // success!
+        }
+    });
+
+    },
 });
