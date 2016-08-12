@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2ad7c3a-97a8-4c02-b269-c02437831f6c" name="Default" comment="add initial packages">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/DataCrowds_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_cordova.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_os.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DataCrowds.iml" afterPath="$PROJECT_DIR$/.idea/DataCrowds.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" />
+    <list default="true" id="f2ad7c3a-97a8-4c02-b269-c02437831f6c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/Data/DataSet.js" afterPath="$PROJECT_DIR$/imports/api/Data/DataSet.js" />
     </list>
     <ignored path="DataCrowds.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -354,7 +346,7 @@
       <workItem from="1470911535623" duration="17858000" />
       <workItem from="1470933756898" duration="473000" />
       <workItem from="1470935029856" duration="832000" />
-      <workItem from="1471005044355" duration="2178000" />
+      <workItem from="1471005044355" duration="2318000" />
     </task>
     <task id="LOCAL-00001" summary="add initial packages">
       <created>1470324694215</created>
@@ -363,11 +355,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470324694216</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="im into backend now !!! frontend sucks ! (fix some issues on server meteor methods definition)">
+      <created>1471007405117</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1471007405117</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36671000" />
+    <option name="totallyTimeSpent" value="36811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,7 +432,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add initial packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="add initial packages" />
+    <MESSAGE value="im into backend now !!! frontend sucks ! (fix some issues on server meteor methods definition)" />
+    <option name="LAST_COMMIT_MESSAGE" value="im into backend now !!! frontend sucks ! (fix some issues on server meteor methods definition)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
