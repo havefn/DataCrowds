@@ -1,6 +1,9 @@
-import {Meteor} from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import { Class } from 'meteor/jagi:astronomy';
-import { Surveys } from './Collections'
+import { Enum } from 'meteor/jagi:astronomy';
+import { Surveys } from './Collections';
+
+
 
 export const Question = Class.create({
     name:'Question',
@@ -18,21 +21,43 @@ export const Question = Class.create({
                 message: "Title is too short"
             }]
         },
-        description : {
-            type: String
-        },
-        answer : {
-            type: String
-        },
-        isActive :{
-            type: Boolean,
-            default : true
-        },
+    }
+})
 
+const BlankEnum = Enum.create({
+    name: 'BlankEnum',
+    identifiers:[]
+})
+
+export const RadioButtonQuestion = Question.inherit({
+    name: 'RadioButtonQuestion',
+    fields: {
+        choices: BlankEnum
+    }
+
+})
+
+export const Answer = Class.create({
+    name:'Answers',
+    secured: true,
+    fields : {
+    
+        text: String
 
     }
 })
 
+
+export const Response = Class.create({
+    name:'Response',
+    secured: true,
+    fields : {
+        surveyId: String
+        ,
+        answers : [Answer]
+
+    }
+})
 
 export const Survey = Class.create({
     name:'Survey',
@@ -51,19 +76,15 @@ export const Survey = Class.create({
                 message: "Title is too short"
             }]
         },
-        ownerId:{
-            type:String
-        },
-        description : {
-            type: String
-        },
+        ownerId: String
+        ,
+        description : String
+        ,
         isActive :{
             type: Boolean,
             default : true
         },
-        Questions :{
-            type: [Question]
-        }
+        Questions: [Question]
 
 
     }
