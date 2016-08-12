@@ -47,9 +47,9 @@ export const DataSet = Class.create({
 Meteor.methods({
     'createDataSet'(title, description, fileLink,){
 
-        if(!Meteor.userId()) throw Meteor.Error (403,"Unauthorized");
+        if(!Meteor.userId()) throw new Meteor.Error (403,"Unauthorized");
 
-        alert(Meteor.userId());
+        console.log(Meteor.userId());
         var dataSet = new DataSet();
         dataSet.ownerId = Meteor.userId();
         dataSet.title = title;
