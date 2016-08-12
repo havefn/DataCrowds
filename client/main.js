@@ -20,21 +20,15 @@ Template.hello.events({
     // increment the counter when button is clicked
     instance.counter.set(instance.counter.get() + 1);
 
-    /*Meteor.call("createDataSet","Aufa","test Ds","nothing", (err, res) => {
+    Meteor.call("createDataSet","Aufa aaaaaaaaajjjjjjjjjjjjjjjjjj","test Ds","nothing", (err, res) => {
       if (err) {
         alert(err);
       } else {
         // success!
+        alert("YEYYY");
       }
     });
-*/
-    Meteor.call("newPost",(err, res) => {
-        if (err) {
-            alert(err);
-        } else {
-            // success!
-        }
-    });
 
+    
     },
 });

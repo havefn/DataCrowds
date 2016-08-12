@@ -1,43 +1,6 @@
 import {Meteor} from 'meteor/meteor';
 import { Class } from 'meteor/jagi:astronomy';
-
-
-const Surveys = new Mongo.Collection('surveys');
-
-export const Survey = Class.create({
-    name:'Survey',
-    Collection : 'Surveys',
-    secured: true,
-    fields : {
-        title:{
-            type: String,
-            validators: [{
-                type: 'maxLength',
-                param: 200,
-                message: "Title is too long"
-            },{
-                type:'minLength',
-                param: 6,
-                message: "Title is too short"
-            }]
-        },
-        ownerId:{
-            type:String
-        },
-        description : {
-            type: String
-        },
-        isActive :{
-            type: Boolean,
-            default : true
-        },
-        Questions :{
-            type: [Question]
-        }
-
-
-    }
-})
+import { Surveys } from './Collections'
 
 export const Question = Class.create({
     name:'Question',
@@ -70,8 +33,10 @@ export const Question = Class.create({
     }
 })
 
-export const Question = Class.create({
-    name:'Question',
+
+export const Survey = Class.create({
+    name:'Survey',
+    collection : Surveys,
     secured: true,
     fields : {
         title:{
@@ -96,10 +61,16 @@ export const Question = Class.create({
             type: Boolean,
             default : true
         },
+        Questions :{
+            type: [Question]
+        }
 
 
     }
 })
+
+
+
 
 Meteor.methods({
 

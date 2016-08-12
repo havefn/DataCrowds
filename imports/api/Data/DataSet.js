@@ -2,16 +2,13 @@
  * Created by aufa on 05/08/2016.
  */
 
-import {Meteor} from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import { Class } from 'meteor/jagi:astronomy';
-
-
-
-const DataSets = new Mongo.Collection('DataSets');
+import { DataSets } from './Collections';
 
 export const DataSet = Class.create({
     name:'DataSet',
-    Collection : 'DataSets',
+    collection : DataSets,
     secured: true,
     fields : {
         title:{
@@ -30,7 +27,8 @@ export const DataSet = Class.create({
             type:String
         },
         buyersId:{
-            type:[String]
+            type:[String],
+            optional :true
         },
         description : {
             type: String
@@ -48,12 +46,17 @@ export const DataSet = Class.create({
 
 Meteor.methods({
     'createDataSet'(title, description, fileLink,){
+
+        if(!Meteor.userId()) throw Meteor.Error (403,"Unauthorized");
+
+        alert(Meteor.userId());
         var dataSet = new DataSet();
+        dataSet.ownerId = Meteor.userId();
         dataSet.title = title;
-        console.log("Im saving it");
         dataSet.description = description;
         dataSet.fileLink =fileLink;
         dataSet.save();
+
 
     },
     'publish'({active, dSId}){
