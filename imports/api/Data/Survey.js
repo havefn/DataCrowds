@@ -9,7 +9,7 @@ export const Question = Class.create({
     name:'Question',
     secured: true,
     fields : {
-        title:{
+        question:{
             type: String,
             validators: [{
                 type: 'maxLength',
@@ -21,6 +21,7 @@ export const Question = Class.create({
                 message: "Title is too short"
             }]
         },
+        description: String
     }
 })
 
@@ -41,9 +42,8 @@ export const Answer = Class.create({
     name:'Answers',
     secured: true,
     fields : {
-    
-        text: String
-
+        text: String,
+        asnwerType : String,
     }
 })
 
@@ -52,10 +52,9 @@ export const Response = Class.create({
     name:'Response',
     secured: true,
     fields : {
-        surveyId: String
-        ,
+        surveyId: String,
+        question: String,
         answers : [Answer]
-
     }
 })
 
@@ -76,23 +75,55 @@ export const Survey = Class.create({
                 message: "Title is too short"
             }]
         },
-        ownerId: String
-        ,
-        description : String
-        ,
+        ownerId: String,
+        description : String,
         isActive :{
             type: Boolean,
             default : true
         },
-        Questions: [Question]
+        questions: [Question],
+        responses : [Response]
+    },
+    behaviors: {
+        timestamp: {
+            hasCreatedField: true,
+            createdFieldName: 'createdAt',
+            hasUpdatedField: true,
+            updatedFieldName: 'updatedAt'
+        }
+    },
+    methods : {
+        generateResponse(userId) {
+            let response = new Response ();
+            response.surveyId = this._id;
+            for(let i =0; i<this.questions.length;i++){
+                let temp = new Answers();
+                temp.answerType = this.questions[i].type;
+                temp.question = this.questions[i].question;
 
+            }
+            this.responses.push(response);
+            this.save();
+
+            return response;
+        }
+    }
 
     }
-})
+)
 
 
 
 
 Meteor.methods({
+    'createNewResponse'(surveyId,answers){
+        if(!Meteor.userId()) throw new Meteor.Error(403,"You must be logged in to anwer response");
+        let survey = Survey.findOne(surveyId)
+        let response = survey.generateResponse(Meteor.userId());
+
+        //TODO put following answers into response answers
+
+        survey.save();
+    }
 
 });

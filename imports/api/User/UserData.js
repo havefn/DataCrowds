@@ -12,9 +12,12 @@ const UserData = Class.create({
         isAdmin : Boolean,
         ownedDataId : [String],
         boughtDataId : [String],
-        boughtDataFileLink : [String],
         ownedSurveyId : [String],
 
+        //CAUTION : MAKE SURE THE FOLLOWING FIELD V IS NOT PUBLISHED
+        boughtDataFileLink : [String],
+
+        //TODO check wether it is safe to implement it here?
         /* Any other fields you want to be published to the client */
     }
 });

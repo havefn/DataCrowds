@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2ad7c3a-97a8-4c02-b269-c02437831f6c" name="Default" comment="">
+    <list default="true" id="f2ad7c3a-97a8-4c02-b269-c02437831f6c" name="Default" comment="add basic CRUD methods for data set&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/Data/DataSet.js" afterPath="$PROJECT_DIR$/imports/api/Data/DataSet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/Data/Survey.js" afterPath="$PROJECT_DIR$/imports/api/Data/Survey.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/User/UserData.js" afterPath="$PROJECT_DIR$/imports/api/User/UserData.js" />
     </list>
     <ignored path="DataCrowds.iws" />
@@ -34,21 +35,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSet.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataSet.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/api/Data/DataSet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="994">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-434">
+              <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+              <folding>
+                <element signature="e#43#82#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Survey.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Survey.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/api/Data/Survey.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="705">
+              <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="packages" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.meteor/packages">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -57,8 +72,18 @@
       <file leaf-file-name="UserData.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/api/User/UserData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <state relative-caret-position="340">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Collections.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/api/Data/Collections.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,13 +113,13 @@
         <option value="$PROJECT_DIR$/imports/api/Data/Question.js" />
         <option value="$PROJECT_DIR$/imports/api/Data/Publication.js" />
         <option value="$PROJECT_DIR$/client/main.html" />
-        <option value="$PROJECT_DIR$/imports/api/Data/Survey.js" />
         <option value="$PROJECT_DIR$/server/main.js" />
         <option value="$PROJECT_DIR$/client/main.js" />
         <option value="$PROJECT_DIR$/.meteor/packages" />
         <option value="$PROJECT_DIR$/imports/api/Data/TestAstronomy.js" />
         <option value="$PROJECT_DIR$/imports/api/User/UserData.js" />
         <option value="$PROJECT_DIR$/imports/api/Data/DataSet.js" />
+        <option value="$PROJECT_DIR$/imports/api/Data/Survey.js" />
       </list>
     </option>
   </component>
@@ -505,7 +530,7 @@
       <workItem from="1470911535623" duration="17858000" />
       <workItem from="1470933756898" duration="473000" />
       <workItem from="1470935029856" duration="832000" />
-      <workItem from="1471010788592" duration="4421000" />
+      <workItem from="1471010788592" duration="7051000" />
     </task>
     <task id="LOCAL-00001" summary="add initial packages">
       <created>1470324694215</created>
@@ -528,11 +553,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471011737341</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add basic CRUD methods for data set&#10;">
+      <created>1471075913544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1471075913544</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38914000" />
+    <option name="totallyTimeSpent" value="41544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -618,7 +650,8 @@
     <MESSAGE value="add initial packages" />
     <MESSAGE value="add fourseven:scss" />
     <MESSAGE value="add fourseven:scss(again)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fourseven:scss(again)" />
+    <MESSAGE value="add basic CRUD methods for data set&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="add basic CRUD methods for data set&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -637,7 +670,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -653,7 +688,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -678,7 +715,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,7 +734,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -720,7 +761,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -745,7 +788,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -770,7 +815,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -894,6 +941,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/User/UserData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/Data/Collections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.meteor/packages">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -902,27 +965,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/api/User/UserData.js">
+    <entry file="file://$PROJECT_DIR$/imports/api/Data/DataSet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="-434">
+          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+          <folding>
+            <element signature="e#43#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/Data/Survey.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/api/Data/DataSet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="994">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="705">
+          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
