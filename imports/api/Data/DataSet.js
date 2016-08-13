@@ -60,10 +60,9 @@ Meteor.methods({
 
     },
     'publish'({active, dSId}){
-        console.log("Hi Im here !");
-
         if((Meteor.userId() == temp.ownerId) || Meteor.user().isAdmin ){
             const temp = DataSet.findOne(dsId);
+            temp.isActive = active;
         }else{
             throw new Meteor.Error(403,'Unauthorized to publish ' + postId );
         }
@@ -76,8 +75,9 @@ Meteor.methods({
            throw new Meteor.Error (111, "User is either an owner or already bought the DataSet");
        }else{
            //TODO Implement pembayaran
-           User.findOne(temp.ownerId()).balance = User.findOne(temp.ownerId()).balance + temp.price;
+
            if(paymentSuccess){
+               User.findOne(temp.ownerId()).balance = User.findOne(temp.ownerId()).balance + temp.price;
                temp.buyersId.push(Meteor.userId());
 
                //TODO add transaction history to user
@@ -86,9 +86,27 @@ Meteor.methods({
            }
        }
     },
+    'updateDataSet'(dsId,doc){
 
-    "test"(param){
-        console.log("Im Here !" + param + Meteor.userId());
+        if((Meteor.userId() == temp.ownerId) || Meteor.user().isAdmin ){
+            const temp = DataSet.findOne(dsId);
+            if(doc.description != null){
+                temp.description = doc.description ;
+            }
+            if(doc.title != null){
+                temp.title = doc.title ;
+            }
+            if(doc.description != null){
+                temp.description = doc.description ;
+            }
+
+            if(doc.isActive != null){
+                temp.isActive = doc.isActive;
+            }
+        }else{
+            throw new Meteor.Error(403,'Unauthorized to publish ' + postId );
+        }
+
     }
 
 })

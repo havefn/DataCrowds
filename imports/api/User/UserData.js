@@ -12,6 +12,7 @@ const UserData = Class.create({
         isAdmin : Boolean,
         ownedDataId : [String],
         boughtDataId : [String],
+        boughtDataFileLink : [String],
         ownedSurveyId : [String],
 
         /* Any other fields you want to be published to the client */
